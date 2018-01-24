@@ -7,16 +7,16 @@
   
   <title>JS函数 | A`Shen-Yao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="创建&amp;gt;字面量  123var obj =&amp;#123;name:&quot;秦始皇&quot;&amp;#125;访问属性  obj.name  或 obj[name]删除属性  delete obj.name  &amp;gt;构造函数 12345678910111213  function obj()&amp;#123;      this代表当前对象实例这样不会把名字和年龄写死，通过构造函数的参数变活了。      this.na">
+  <meta name="description" content="创建: 字面量  123var obj =&amp;#123;name:&quot;秦始皇&quot;&amp;#125;访问属性  obj.name  或 obj[name]删除属性  delete obj.name    &amp;gt; 工厂模式 12345678910  	:   函数的返回值是一个对象function person(name, age)&amp;#123;	return &amp;#123;		name: name,		age:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS函数">
 <meta property="og:url" content="http://yoursite.com/2018/01/24/Function/index.html">
 <meta property="og:site_name" content="A`Shen-Yao">
-<meta property="og:description" content="创建&amp;gt;字面量  123var obj =&amp;#123;name:&quot;秦始皇&quot;&amp;#125;访问属性  obj.name  或 obj[name]删除属性  delete obj.name  &amp;gt;构造函数 12345678910111213  function obj()&amp;#123;      this代表当前对象实例这样不会把名字和年龄写死，通过构造函数的参数变活了。      this.na">
-<meta property="og:updated_time" content="2018-01-24T10:05:04.309Z">
+<meta property="og:description" content="创建: 字面量  123var obj =&amp;#123;name:&quot;秦始皇&quot;&amp;#125;访问属性  obj.name  或 obj[name]删除属性  delete obj.name    &amp;gt; 工厂模式 12345678910  	:   函数的返回值是一个对象function person(name, age)&amp;#123;	return &amp;#123;		name: name,		age:">
+<meta property="og:updated_time" content="2018-01-24T10:52:37.792Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS函数">
-<meta name="twitter:description" content="创建&amp;gt;字面量  123var obj =&amp;#123;name:&quot;秦始皇&quot;&amp;#125;访问属性  obj.name  或 obj[name]删除属性  delete obj.name  &amp;gt;构造函数 12345678910111213  function obj()&amp;#123;      this代表当前对象实例这样不会把名字和年龄写死，通过构造函数的参数变活了。      this.na">
+<meta name="twitter:description" content="创建: 字面量  123var obj =&amp;#123;name:&quot;秦始皇&quot;&amp;#125;访问属性  obj.name  或 obj[name]删除属性  delete obj.name    &amp;gt; 工厂模式 12345678910  	:   函数的返回值是一个对象function person(name, age)&amp;#123;	return &amp;#123;		name: name,		age:">
   
     <link rel="alternate" href="/atom.xml" title="A`Shen-Yao" type="application/atom+xml">
   
@@ -85,16 +85,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><pre><code>&gt;字面量 
+        <ul>
+<li>创建:<blockquote>
+<p>字面量 </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var obj =&#123;name:<span class="string">"秦始皇"</span>&#125;</span><br><span class="line">访问属性  obj.name  或 obj[name]</span><br><span class="line">删除属性  delete obj.name</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<pre><code>&gt; 工厂模式
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  	:   函数的返回值是一个对象</span><br><span class="line"><span class="keyword">function</span> person(name, age)&#123;</span><br><span class="line">	<span class="built_in">return</span> &#123;</span><br><span class="line">		name: name,</span><br><span class="line">		age: age,</span><br><span class="line">		run:<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">			console.log(<span class="string">"run"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-&gt;构造函数
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">function</span> <span class="function"><span class="title">obj</span></span>()&#123;</span><br><span class="line"></span><br><span class="line">      this代表当前对象实例</span><br><span class="line">这样不会把名字和年龄写死，通过构造函数的参数变活了。</span><br><span class="line"></span><br><span class="line">      this.name = name;</span><br><span class="line">      this.run = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">		console.log(<span class="string">"我跑"</span>);</span><br><span class="line">	&#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">      函数内部私有变量会成为对象的私有属性</span><br><span class="line">私有属性：无法再外部直接访问，需要通过中间函数</span><br></pre></td></tr></table></figure>
+&gt; 构造函数
+:   构造函数----类
+
+    注意：构造函数和普通的函数一样，但为了区分，我们往往把构造函数的首字母大写。
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">function</span> <span class="function"><span class="title">obj</span></span>()&#123;</span><br><span class="line"></span><br><span class="line">      :   this代表当前对象实例</span><br><span class="line">:   这样不会把名字和年龄写死，通过构造函数的参数变活了。</span><br><span class="line"></span><br><span class="line">      this.name = name;</span><br><span class="line">      this.run = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">		console.log(<span class="string">"我跑"</span>);</span><br><span class="line">	&#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">      :   函数内部私有变量会成为对象的私有属性</span><br><span class="line">:   私有属性：无法再外部直接访问，需要通过中间函数</span><br></pre></td></tr></table></figure>
 </code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/24/Function/" data-id="cjcswma3x0001igrcpisf0y0p" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/24/Function/" data-id="cjcsybrv500008grc70s38k5p" class="article-share-link">Teilen</a>
       
       
     </footer>
